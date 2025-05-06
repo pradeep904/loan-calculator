@@ -1,0 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.navlinks{
+    color: white;
+}
+.default-button {
+    background-color: transparent;
+    color: white;
+    text-decoration: none;
+  }
+.active-button {
+    background-color: #3888d8; /* Change to your preferred color */
+    color: white;
+    border-radius: 5px;
+    padding:0 10px;
+    text-decoration: none;
+  }
+  .gohome{
+    display: inline-block;
+    
+    padding: 10px 20px;
+    color: #1976d5;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+    border: 0.5px solid #1976d5;
+  }
