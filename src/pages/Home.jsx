@@ -30,7 +30,7 @@ import Navbar from "../components/Navbar";
 
 const Home = () => {
 
-  const { emi, calculateEMI, schedule } = useEMI();
+  const { emi, calculateEMI, schedule,setSchedule,setEmi } = useEMI();
   const [principal, setPrincipal] = useState("10000");
   const [rate, setRate] = useState("8.5");
   const [tenure, setTenure] = useState("5");
@@ -125,9 +125,8 @@ const Home = () => {
           CALCULATE
         </Button>
 
-        {emi !==null && <TableContent  emi={emi} schedule={schedule}/>}
+        {emi !==null && <TableContent  emi={emi} schedule={schedule} setSchedule={setSchedule} setEmi={setEmi}/>}
         
-        {/* <TableContent emi={emi} schedule={schedule} /> */}
       </Container>
     </>
   );

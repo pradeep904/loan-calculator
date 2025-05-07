@@ -34,7 +34,7 @@ const useEMI=()=>{
         }
         setSchedule(scheduleData);
     };
-    return {emi, calculateEMI, schedule};
+    return {emi, calculateEMI, schedule, setSchedule, setEmi};
 }
 
 export default useEMI;
