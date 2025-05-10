@@ -79,7 +79,7 @@ const TableContent = ({ emi, schedule,setSchedule, setEmi }) => {
       </Grid>
 
       <Paper sx={{ mt: 4, width: "100%" }}>
-        <Typography variant="h5">
+        <Typography variant="h5" sx={{p:3}}>
           Amortization Schedule ({localCurrency})
         </Typography>
         {schedule.length > 0 && (

@@ -31,7 +31,8 @@ function App() {
   return (
     <>
         <ThemeContextProvider>
-          <Box bgcolor={"Background.default"}>
+          {/* <Box bgcolor={"Background.default"}> */}
+          <Box sx={{ backgroundColor: (theme) => theme.palette.background.default }} >
         <LandingPage/>
           </Box>
 

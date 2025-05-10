@@ -40,7 +40,7 @@ const Home = () => {
     <>
         <Navbar/>
       <Container sx={{ mt: 10 }}>
-        <Typography variant="h4" gutterBottom>
+        <Typography variant="h4" gutterBottom >
           Loan Calculator Dashboard
         </Typography>
 

@@ -1,4 +1,4 @@
-import { Box,Paper,Table,TableBody,TableCell,TableContainer,TablePagination,TableRow,TableHead, Grid, Typography } from "@mui/material";
+import { Box,Paper,Table,TableBody,TableCell,TableContainer,TablePagination,TableRow,TableHead, Grid, Typography, CircularProgress } from "@mui/material";
 import React, { useEffect, useState, useContext } from 'react'
 import { DataContext } from "../contexts/CurrencyApi";
 import Navbar from "../components/Navbar"
@@ -6,7 +6,7 @@ import Navbar from "../components/Navbar"
 
 const ExchangeRate = () => {
 
-    const { currencyData } = useContext(DataContext);
+    const { currencyData,loading, isError } = useContext(DataContext);
 
     const [page, setPage] = useState(0);
     const [rowsPerPage, setRowsPerPage] = useState(10);
@@ -22,9 +22,25 @@ const ExchangeRate = () => {
   
   const currencyCode=Object.entries(currencyData);
   
+    if(loading){
+      return <Box sx={{ display: 'flex' }}>
+      <CircularProgress />
+    </Box>
+    }
+
+    if(isError?.status){
+      return <Box>
+        <Typography variant="h5" sx={{color:"red"}}>
+          {isError.msg}
+        </Typography>
+      </Box>
+    }
+
 
   return (
     <>  
+    
+        
         <Navbar/>
 
     <Box sx={{mt:15,height:"100vh",display:"flex", justifyContent:"center",alignItems:"center"}}>
